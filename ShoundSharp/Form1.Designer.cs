@@ -1,6 +1,6 @@
 ﻿namespace ShoundSharp
 {
-    partial class Form1
+    partial class frmMain
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,12 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            btnAdd = new Button();
+            btnEdit = new Button();
+            btnDelete = new Button();
+            SuspendLayout();
+            // 
+            // btnAdd
+            // 
+            btnAdd.Location = new Point(643, 28);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(124, 29);
+            btnAdd.TabIndex = 0;
+            btnAdd.Text = "+";
+            btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += button1_Click;
+            // 
+            // btnEdit
+            // 
+            btnEdit.Location = new Point(643, 63);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(124, 29);
+            btnEdit.TabIndex = 1;
+            btnEdit.Text = "Aanpassen";
+            btnEdit.UseVisualStyleBackColor = true;
+            // 
+            // btnDelete
+            // 
+            btnDelete.Location = new Point(643, 98);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(124, 29);
+            btnDelete.TabIndex = 2;
+            btnDelete.Text = "Verwijderen";
+            btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // frmMain
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Text = "Form1";
+            Controls.Add(btnDelete);
+            Controls.Add(btnEdit);
+            Controls.Add(btnAdd);
+            Name = "frmMain";
+            Text = "SoundSharp";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button btnAdd;
+        private Button btnEdit;
+        private Button btnDelete;
     }
 }
